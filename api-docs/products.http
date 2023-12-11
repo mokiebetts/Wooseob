@@ -1,11 +1,9 @@
-@host = http://localhost:3000/api/products
-@accessToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImlhdCI6MTY5OTg3MjMxOSwiZXhwIjoxNjk5OTE1NTE5fQ.YwbcoCvUWWgfkLmVL8mIm1MkiZxPaV_rZ-krRv5g9Js
-
-
+@host = http://localhost:3306/api/products
+@accessToken = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImlhdCI6MTcwMjI1NTY5MiwiZXhwIjoxNzAyMjU5MjkyfQ.DnkrImi9A3UusX7Q5hiOBBvzBME62X_9lxKCmPkdXGk
 ### 상품 생성
 POST {{host}}
 Content-Type: application/json
-Authorization: Bearer {{accessToken}}
+Authorization:{{accessToken}}
 
 {
    "title": "킨더조이",
@@ -16,12 +14,12 @@ Authorization: Bearer {{accessToken}}
 GET {{host}}
 
 ### 상품 상세 조회
-GET {{host}}/1
+GET {{host}}/34
 
 ### 상품 수정
-PUT {{host}}/1
+PUT {{host}}/34
 Content-Type: application/json
-Authorization: Bearer {{accessToken}}
+Authorization: {{accessToken}}
 
 {
    "title": "페레로로쉐",
@@ -30,6 +28,6 @@ Authorization: Bearer {{accessToken}}
 }
 
 ### 상품 삭제
-DELETE {{host}}/1
+DELETE {{host}}/34
 Content-Type: application/json
-Authorization: Bearer {{accessToken}}
+Authorization:  {{accessToken}}
